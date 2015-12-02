@@ -46,7 +46,7 @@ public class ConnectionConstants {
     public static final String REQUEST_PROPERTY_FILE_TRNSFER_CONTENT_LENGTH = "Content-Length";
 
     public static final String SERVER_URL =
-            "";
+            "http://172.31.99.187/genevents/api";
 
     public static final int CONNECTION_TIME_OUT = 60000;
 

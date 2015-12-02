@@ -4,12 +4,14 @@ package com.hackathon.genevents.gateway.request;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import com.google.gson.Gson;
 import com.hackathon.genevents.EventsApplication;
 import com.hackathon.genevents.R;
 import com.hackathon.genevents.constants.ConnectionConstants;
 import com.hackathon.genevents.gateway.helper.RequestResponseHandler;
 import com.hackathon.genevents.gateway.listener.NetworkResponseListener;
 import com.hackathon.genevents.gateway.listener.RequestCallbackListener;
+import com.hackathon.genevents.gateway.response.LoginResponce;
 import com.hackathon.genevents.gateway.response.Response;
 import com.hackathon.genevents.gateway.response.reponseparser.JsonResponseParser;
 import com.hackathon.genevents.gateway.util.RequestConstants;
@@ -23,16 +25,15 @@ public class LoginRequest extends AsyncTask<Object, Void, Void> implements Netwo
 
 	private static final String TAG = "LoginRequest";
 
-	private final String loginUserName;
 
-	private final String loginPassword;
+
+	private final LoginDTO loginDTO;
 
 	private final RequestCallbackListener uiListener;
 
-	public LoginRequest(String userName, String password,
+	public LoginRequest(LoginDTO loginDTO,
 			RequestCallbackListener uiListener) {
-		this.loginUserName = userName;
-		this.loginPassword = password;
+		this.loginDTO=loginDTO;
 		this.uiListener = uiListener;
 	}
 
@@ -40,13 +41,14 @@ public class LoginRequest extends AsyncTask<Object, Void, Void> implements Netwo
 	protected Void doInBackground(Object... params) {
 
 		// Form the Login query
-		String reqQuery = formLoginQuery(loginUserName, loginPassword);
-		Log.d(TAG,"Login Request URL: "+reqQuery);
 
-		// Start processing the request
 		RequestResponseHandler reqHanlder = new RequestResponseHandler();
-		reqHanlder.createRequestTask(ConnectionConstants.SERVER_URL + reqQuery, null,
-				RequestResponseHandler.METHOD_GET, this);
+		Gson gson = new Gson();
+		String jsonObj = gson.toJson(loginDTO);
+		reqHanlder.createRequestTask(
+				ConnectionConstants.SERVER_URL +"/Login/Login", jsonObj,
+				RequestResponseHandler.METHOD_POST, this);
+
 		reqHanlder.processRequest();
 		return null;
 	}
@@ -58,7 +60,7 @@ public class LoginRequest extends AsyncTask<Object, Void, Void> implements Netwo
 
 		// Parse the response and send to UI Listener
 		try {
-			uiListener.onResponseReceived(JsonResponseParser.parseResponse(responseData, LoginDTO.class));
+			uiListener.onResponseReceived(JsonResponseParser.parseResponse(responseData, LoginResponce.class));
 
 		} catch (Exception e) {
 			Log.e(TAG, "Exception: " + e.getMessage());

@@ -8,14 +8,23 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.hackathon.genevents.constants.StringConstants;
+import com.hackathon.genevents.resuable.gcm.GCMManager;
+import com.hackathon.genevents.utils.DRDSharedPreferences;
+
 public class SplashActivity extends AppCompatActivity {
 
-
+    private GCMManager mGcmManager;
+    private DRDSharedPreferences mDrdSharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         messageHandler.sendEmptyMessageDelayed(0, 2000);
+        mGcmManager = new GCMManager();
+        mDrdSharedPreferences = new DRDSharedPreferences(this);
+        if (mDrdSharedPreferences.getString(StringConstants.PREF_GCM_REG_ID, "").equals(""))
+            mGcmManager.registerToGCM(this);
 
     }
 
