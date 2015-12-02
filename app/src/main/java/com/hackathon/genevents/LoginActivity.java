@@ -88,6 +88,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void showLoader() {
         progressBar = new ProgressDialog(LoginActivity.this);
         progressBar.setCancelable(true);
+        progressBar.setCanceledOnTouchOutside(false);
         progressBar.setMessage("Loading ...");
         progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressBar.show();
