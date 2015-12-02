@@ -16,4 +16,8 @@
     <string name="roboto_regular">Roboto-Regular.ttf</string>
     <string name="avenir_book">Avenir.ttc</string>
     <string name="avenir_roman">Avenir_Roman.otf</string>
+    <string name="title_activity_all_events">AllEventsActivity</string>
+    <string name="title_activity_up_coming">UpComingActivity</string>
+    <string name="lbl_all_events">ALL EVENTS</string>
+    <string name="lbl_upcomping_events">UPCOMPING EVENTS</string>
 </resources>
