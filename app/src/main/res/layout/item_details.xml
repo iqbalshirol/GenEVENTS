@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_drop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/avatar_event3" />
+
+        <RelativeLayout
+            android:id="@+id/rr_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_drop"
+            android:orientation="horizontal">
+
+            <com.hackathon.genevents.resuable.CustomTextView
+                android:id="@+id/tv_donor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="8dp"
+
+                android:gravity="left"
+                android:text="Venkatesh"
+                android:textColor="#801D1D26"
+                android:textSize="18sp"
+                app:font="@string/avenir_book" />
+
+            <com.hackathon.genevents.resuable.CustomTextView
+                android:id="@+id/tv_item_schedule_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:drawablePadding="6dp"
+                android:drawableRight="@mipmap/clock_icon"
+                android:gravity="center"
+                android:text="8-10 am"
+                android:textColor="#801D1D26"
+                android:textSize="18sp"
+                app:font="@string/avenir_book" />
+        </RelativeLayout>
+
+        <com.hackathon.genevents.resuable.CustomTextView
+            android:id="@+id/tv_item_addres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rr_item"
+            android:layout_gravity="left"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/iv_drop"
+            android:singleLine="true"
+            android:text="H No:9,3 rd cross,Manjunath layout,Marathahalli,Bangalore"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:font="@string/avenir_book" />
+
+    </RelativeLayout>
+</LinearLayout>

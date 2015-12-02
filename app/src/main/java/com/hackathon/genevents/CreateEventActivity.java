@@ -9,7 +9,7 @@ import android.widget.TextView;
 /**
  * Created by venkatesh.kolla on 12/2/2015.
  */
-public class CreateEvent extends AppCompatActivity {
+public class CreateEventActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
