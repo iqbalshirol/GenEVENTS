@@ -11,29 +11,28 @@ import com.hackathon.genevents.constants.ConnectionConstants;
 import com.hackathon.genevents.gateway.helper.RequestResponseHandler;
 import com.hackathon.genevents.gateway.listener.NetworkResponseListener;
 import com.hackathon.genevents.gateway.listener.RequestCallbackListener;
-import com.hackathon.genevents.gateway.response.LoginResponce;
 import com.hackathon.genevents.gateway.response.Response;
 import com.hackathon.genevents.gateway.response.reponseparser.JsonResponseParser;
+import com.hackathon.genevents.modal.EventIdDTO;
 import com.hackathon.genevents.modal.GetEventResDTO;
 import com.hackathon.genevents.modal.GetEventsDTO;
-import com.hackathon.genevents.modal.LoginDTO;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
 
-public class GetEventsRequest extends AsyncTask<Object, Void, Void> implements NetworkResponseListener {
+public class GetEventInfo extends AsyncTask<Object, Void, Void> implements NetworkResponseListener {
 
     private static final String TAG = "GetEventsRequest";
 
 
-    private final GetEventsDTO getEventsDTO;
+    private final EventIdDTO eventId;
 
     private final RequestCallbackListener uiListener;
 
-    public GetEventsRequest(GetEventsDTO getEventsDTO,
-                            RequestCallbackListener uiListener) {
-        this.getEventsDTO = getEventsDTO;
+    public GetEventInfo(EventIdDTO eventId,
+                        RequestCallbackListener uiListener) {
+        this.eventId = eventId;
         this.uiListener = uiListener;
     }
 
@@ -44,9 +43,9 @@ public class GetEventsRequest extends AsyncTask<Object, Void, Void> implements N
 
         RequestResponseHandler reqHanlder = new RequestResponseHandler();
         Gson gson = new Gson();
-        String jsonObj = gson.toJson(getEventsDTO);
+        String jsonObj = gson.toJson(eventId);
         reqHanlder.createRequestTask(
-                ConnectionConstants.SERVER_URL + "/Events/GetEvents", jsonObj,
+                ConnectionConstants.SERVER_URL + "/Events/GetEventInfo", jsonObj,
                 RequestResponseHandler.METHOD_POST, this);
 
         reqHanlder.processRequest();
@@ -60,7 +59,7 @@ public class GetEventsRequest extends AsyncTask<Object, Void, Void> implements N
 
         // Parse the response and send to UI Listener
         try {
-            uiListener.onResponseReceived(JsonResponseParser.parseListResponse(responseData, GetEventResDTO[].class, "eventsInformation"));
+            uiListener.onResponseReceived(JsonResponseParser.parseListResponse(responseData, GetEventResDTO.class, "eventsInformation"));
 
         } catch (Exception e) {
             Log.e(TAG, "Exception: " + e.getMessage());

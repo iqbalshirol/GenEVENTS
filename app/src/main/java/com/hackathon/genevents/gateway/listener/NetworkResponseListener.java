@@ -1,18 +1,3 @@
-/**
- * ============================================================================================================
- * File Name       	: NetworkResponseListener.java
- * Author          	: Apex Team @ Endeavour Software Technologies pvt. ltd., Bangalore.
- * Version         	: 1.0.0
- * Copyright       	: Apex
- * Description     	:This is the Parent interface which receive the response callback from gateway layer.
- * History         	:
- * ============================================================================================================
- *  Sr. No.	    Date		          Name				 Description
- * ============================================================================================================
- *  1.	   	    15.10.2014            Apex Team            Initial Version.
- *  2.                                Apex Team            Check SVN.
- * ============================================================================================================
- */
 
 package com.hackathon.genevents.gateway.listener;
 

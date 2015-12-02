@@ -16,6 +16,9 @@ public class DescriptionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_description);
         inItHeader();
         TextView name = (TextView) findViewById(R.id.event_name);
+        TextView desc = (TextView) findViewById(R.id.event_dese);
+        TextView attendThisEvent = (TextView) findViewById(R.id.ll_evet_c);
+
     }
 
     public void inItHeader() {
