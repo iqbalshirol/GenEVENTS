@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:fitsSystemWindows="true"
+    tools:context=".HomeActivty">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D7D7D7">
+
+        <include
+            layout="@layout/header_layout"
+            android:id="@+id/header_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+        <com.hackathon.genevents.resuable.CustomEditText
+            android:id="@+id/event_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:drawableRight="@mipmap/camera"
+            android:layout_below="@+id/header_layout"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:hint="Event"
+            android:textSize="@dimen/text_normal_size"
+            app:font="@string/avenir_book" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/event_name"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout2">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.hackathon.genevents.resuable.CustomTextView
+                    android:id="@+id/tv_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_usernmae"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:text="From"
+                    android:textColor="#1D1D26"
+                    android:textSize="@dimen/text_normal_size"
+                    app:font="@string/avenir_book" />
+
+                <com.hackathon.genevents.resuable.CustomEditText
+                    android:id="@+id/from_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_pwd"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="From Time"
+                    android:textSize="@dimen/text_normal_size"
+                    app:font="@string/avenir_book" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.hackathon.genevents.resuable.CustomTextView
+                    android:id="@+id/tv_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_usernmae"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:text="To"
+                    android:textColor="#1D1D26"
+                    android:textSize="@dimen/text_normal_size"
+                    app:font="@string/avenir_book" />
+
+                <com.hackathon.genevents.resuable.CustomEditText
+                    android:id="@+id/to_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_pwd"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="To Time"
+                    android:textSize="@dimen/text_normal_size"
+                    app:font="@string/avenir_book" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout2"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout3">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.hackathon.genevents.resuable.CustomTextView
+                    android:id="@+id/tv_venu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_usernmae"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Venu/Location"
+                    android:textColor="#1D1D26"
+                    android:textSize="@dimen/text_normal_size"
+                    app:font="@string/avenir_book" />
+
+                <com.hackathon.genevents.resuable.CustomEditText
+                    android:id="@+id/venu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_pwd"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="invoising"
+                    android:textSize="@dimen/text_normal_size"
+                    app:font="@string/avenir_book" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.hackathon.genevents.resuable.CustomTextView
+                    android:id="@+id/tv_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_usernmae"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Mode of travel"
+                    android:textColor="#1D1D26"
+                    android:textSize="@dimen/text_normal_size"
+                    app:font="@string/avenir_book" />
+
+                <com.hackathon.genevents.resuable.CustomEditText
+                    android:id="@+id/to_mode_of_travel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_pwd"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="Bus"
+                    android:textSize="@dimen/text_normal_size"
+                    app:font="@string/avenir_book" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout3"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout4">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.hackathon.genevents.resuable.CustomTextView
+                    android:id="@+id/tv_estimated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_usernmae"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Estimated Fee"
+                    android:textColor="#1D1D26"
+                    android:textSize="@dimen/text_normal_size"
+                    app:font="@string/avenir_book" />
+
+                <com.hackathon.genevents.resuable.CustomEditText
+                    android:id="@+id/Estimated_fee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_pwd"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="$28,00.00"
+                    android:textSize="@dimen/text_normal_size"
+                    app:font="@string/avenir_book" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.hackathon.genevents.resuable.CustomTextView
+                    android:id="@+id/tv_mode3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_usernmae"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Mode of travel"
+                    android:textColor="#1D1D26"
+                    android:textSize="@dimen/text_normal_size"
+                    app:font="@string/avenir_book" />
+
+                <com.hackathon.genevents.resuable.CustomEditText
+                    android:id="@+id/to_mode_of_travel3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_pwd"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="Bus"
+                    android:textSize="@dimen/text_normal_size"
+                    app:font="@string/avenir_book" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_below="@id/linearLayout4"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.hackathon.genevents.resuable.CustomTextView
+                android:id="@+id/tv_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_usernmae"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:text="Description"
+                android:textColor="#1D1D26"
+                android:textSize="@dimen/text_normal_size"
+                app:font="@string/avenir_book" />
+
+            <com.hackathon.genevents.resuable.CustomEditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_pwd"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:hint="hi hello have a nice day"
+                android:textSize="@dimen/text_normal_size"
+                app:font="@string/avenir_book" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

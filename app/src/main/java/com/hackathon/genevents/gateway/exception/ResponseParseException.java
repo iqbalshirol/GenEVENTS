@@ -1,6 +1,5 @@
 package com.hackathon.genevents.gateway.exception;
 
-
 import com.hackathon.genevents.EventsApplication;
 import com.hackathon.genevents.R;
 

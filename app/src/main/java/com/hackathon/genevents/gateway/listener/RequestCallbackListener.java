@@ -1,18 +1,3 @@
-/**
- * ============================================================================================================
- * File Name       	: RequestCallbackListener.java
- * Author          	: Apex Team @ Endeavour Software Technologies pvt. ltd., Bangalore.
- * Version         	: 1.0.0
- * Copyright       	: Apex
- * Description     	: This is the interface which receives the request process callback to notify the UI layer.
- * History         	:
- * ============================================================================================================
- *  Sr. No.	    Date		          Name				 Description
- * ============================================================================================================
- *  1.	   	    16.10.2014            Apex Team            Initial Version.
- *  2.                                Apex Team            Check SVN.
- * ============================================================================================================
- */
 
 package com.hackathon.genevents.gateway.listener;
 

@@ -1,18 +1,3 @@
-/**
- * ============================================================================================================
- * File Name       	: ClientTimeOutException.java
- * Author          	: Apex Team @ Endeavour Software Technologies pvt. ltd., Bangalore.
- * Version         	: 1.0.0
- * Copyright       	: Endeavour
- * Description     	:This class handle Network client time out exception.
- * History         	:
- * ============================================================================================================
- *  Sr. No.	    Date		          Name				 Description
- * ============================================================================================================
- *  1.	   	    15.10.2014            Apex Team            Initial Version.
- *  2.                                Apex Team            Check SVN.
- * ============================================================================================================
- */
 package com.hackathon.genevents.gateway.exception;
 
 import com.hackathon.genevents.EventsApplication;

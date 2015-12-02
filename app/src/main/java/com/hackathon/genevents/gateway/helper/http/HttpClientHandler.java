@@ -1,18 +1,3 @@
-/**
- * ============================================================================================================
- * File Name       	: HttpClientHandler.java
- * Author          	: Apex Team @ Endeavour Software Technologies pvt. ltd., Bangalore.
- * Version         	: 1.0.0
- * Copyright       	: Endeavour
- * Description     	: This class creates http client communication requests sends the request to server and receive response.
- * History         	:
- * ============================================================================================================
- *  Sr. No.	    Date		          Name				 Description
- * ============================================================================================================
- *  1.	   	    16.10.2014           Apex Team            Initial Version.
- *  2.                               Apex Team            Check SVN.
- * ============================================================================================================
- */
 
 package com.hackathon.genevents.gateway.helper.http;
 
