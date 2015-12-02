@@ -15,6 +15,15 @@ import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import com.hackathon.genevents.gateway.listener.RequestCallbackListener;
+import com.hackathon.genevents.gateway.request.GetEventsRequest;
+import com.hackathon.genevents.modal.GetEventResDTO;
+import com.hackathon.genevents.modal.GetEventsDTO;
+import com.hackathon.genevents.modal.ResponseDTO;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * Created by venkatesh.kolla on 12/2/2015.
  */
@@ -24,12 +33,15 @@ public class HomeActivity extends TabActivity {
     private ImageView imgViewmenu;
     private ListView drawerListView;
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         initDrawer();
         tabs();
+        //use this for get events
+
     }
 
     private void tabs() {

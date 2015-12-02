@@ -34,24 +34,6 @@ public class SplashActivity extends AppCompatActivity {
         mDrdSharedPreferences = new DRDSharedPreferences(this);
         if (mDrdSharedPreferences.getString(StringConstants.PREF_GCM_REG_ID, "").equals(""))
             mGcmManager.registerToGCM(this);
-//use this for get events
-        GetEventsDTO getEventsDTO = new GetEventsDTO();
-        getEventsDTO.setEventName("");
-        getEventsDTO.setEventType("1");
-        getEventsDTO.setUserID("2");
-        new GetEventsRequest(getEventsDTO, new RequestCallbackListener() {
-            @Override
-            public void onResponseReceived(ResponseDTO responseData) {
-                ArrayList<GetEventResDTO> eventResDTOs = new ArrayList<GetEventResDTO>();
-                eventResDTOs.addAll(Arrays.asList((GetEventResDTO[]) responseData
-                        .getResponseObj()));
-            }
-
-            @Override
-            public void onError(int code, String message) {
-
-            }
-        }).execute();
     }
 
     private Handler messageHandler = new Handler() {

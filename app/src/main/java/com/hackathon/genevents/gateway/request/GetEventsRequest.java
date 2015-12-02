@@ -15,6 +15,7 @@ import com.hackathon.genevents.gateway.response.LoginResponce;
 import com.hackathon.genevents.gateway.response.Response;
 import com.hackathon.genevents.gateway.response.reponseparser.JsonResponseParser;
 import com.hackathon.genevents.modal.GetEventResDTO;
+import com.hackathon.genevents.modal.GetEventResponce;
 import com.hackathon.genevents.modal.GetEventsDTO;
 import com.hackathon.genevents.modal.LoginDTO;
 
@@ -60,7 +61,7 @@ public class GetEventsRequest extends AsyncTask<Object, Void, Void> implements N
 
         // Parse the response and send to UI Listener
         try {
-            uiListener.onResponseReceived(JsonResponseParser.parseListResponse(responseData, GetEventResDTO[].class, "eventsInformation"));
+            uiListener.onResponseReceived(JsonResponseParser.parseListResponse(responseData, GetEventResponce[].class, "eventsInformation"));
 
         } catch (Exception e) {
             Log.e(TAG, "Exception: " + e.getMessage());
