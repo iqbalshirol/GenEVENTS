@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="5dp">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -36,6 +36,7 @@
                 android:text="Venkatesh"
                 android:textColor="#801D1D26"
                 android:textSize="18sp"
+
                 app:font="@string/avenir_book" />
 
             <com.hackathon.genevents.resuable.CustomTextView
@@ -46,11 +47,11 @@
                 android:layout_centerVertical="true"
                 android:layout_gravity="right"
                 android:drawablePadding="6dp"
-                android:drawableRight="@mipmap/clock_icon"
                 android:gravity="center"
                 android:text="8-10 am"
                 android:textColor="#801D1D26"
                 android:textSize="18sp"
+
                 app:font="@string/avenir_book" />
         </RelativeLayout>
 
@@ -63,6 +64,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             android:layout_toRightOf="@+id/iv_drop"
+            android:minLines="2"
             android:singleLine="true"
             android:text="H No:9,3 rd cross,Manjunath layout,Marathahalli,Bangalore"
             android:textColor="#000000"

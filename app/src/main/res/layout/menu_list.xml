@@ -81,7 +81,7 @@
                         android:gravity="center"
                         android:text="Attend"
                         android:textColor="#8C8C8C"
-                        android:textSize="10sp"
+                        android:textSize="15.99dp"
                         app:font="@string/roboto_regular" />
 
                 </LinearLayout>
@@ -115,7 +115,7 @@
                         android:gravity="center"
                         android:text="Attending"
                         android:textColor="#8C8C8C"
-                        android:textSize="10sp"
+                        android:textSize="15.99dp"
                         android:textStyle="normal"
                         app:font="@string/roboto_regular" />
 

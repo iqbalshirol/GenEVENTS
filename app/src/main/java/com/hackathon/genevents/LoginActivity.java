@@ -62,6 +62,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             if (responce.getIsAuhthenticated().equalsIgnoreCase("True")) {
                                 Intent i = new Intent(LoginActivity.this, HomeActivity.class);
                                 startActivity(i);
+                                LoginActivity.this.finish();
                             } else {
                                 Toast.makeText(LoginActivity.this, "Login fail", Toast.LENGTH_LONG).show();
                             }

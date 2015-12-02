@@ -21,6 +21,8 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.v4.app.NotificationCompat;
@@ -88,11 +90,13 @@ public class GcmIntentService extends IntentService {
 
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this)
-        .setSmallIcon(R.drawable.notification_template_icon_bg)
-        .setContentTitle("GCM Notification")
+        .setSmallIcon(R.mipmap.app_icon)
+        .setContentTitle("GenEvents")
         .setStyle(new NotificationCompat.BigTextStyle()
         .bigText(msg))
-        .setContentText(msg);
+        .setContentText("New Event");
+        Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.mipmap.app_icon);
+        mBuilder.setLargeIcon(largeIcon);
 
         mBuilder.setContentIntent(contentIntent);
         mNotificationManager.notify(NOTIFICATION_ID, mBuilder.build());
