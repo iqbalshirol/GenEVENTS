@@ -59,14 +59,14 @@ public class LoginRequest extends AsyncTask<Object, Void, Void> implements Netwo
 	protected Void doInBackground(Object... params) {
 
 		// Form the Login query
-		String reqQuery = QueryRequestBuilder.formLoginQuery(loginUserName, loginPassword, pinLogin, versionNumber);
+		/*String reqQuery = QueryRequestBuilder.formLoginQuery(loginUserName, loginPassword, pinLogin, versionNumber);
 		Log.d(TAG,"Login Request URL: "+reqQuery);
 
 		// Start processing the request
 		RequestResponseHandler reqHanlder = new RequestResponseHandler();
 		reqHanlder.createRequestTask(ConnectionConstants.SERVER_URL + reqQuery, null,
 				RequestResponseHandler.METHOD_GET, this);
-		reqHanlder.processRequest();
+		reqHanlder.processRequest();*/
 		return null;
 	}
 
