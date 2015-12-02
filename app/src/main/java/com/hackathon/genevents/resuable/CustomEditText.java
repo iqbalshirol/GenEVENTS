@@ -4,8 +4,8 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.EditText;
 
-import com.hackathon.dropbydrop.R;
-import com.hackathon.dropbydrop.utils.UIUtils;
+import com.hackathon.genevents.R;
+import com.hackathon.genevents.utils.UIUtils;
 
 /**
  * This class is responsible for implementing customized edit text

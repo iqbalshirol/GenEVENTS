@@ -34,7 +34,7 @@ public class ConnectionConstants {
     public static final String CONTENTTYPE_JSON = "application/json";
     public static final String CONTENTTYPE_XML = "text/xml";
 
-
+    public static final String ENCODEINGFORMAT = "UTF-8";
     public static final String SOAP_ACTION_URL_GET_RATE = "urn:insert_query#insert_query";
 
     public static final String REQUEST_PROPERTY_CONTENT_TYPE = "Content-Type";

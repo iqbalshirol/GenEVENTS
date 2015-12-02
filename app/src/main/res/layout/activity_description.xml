@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:fitsSystemWindows="true"
+    tools:context=".HomeActivty">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="#D7D7D7">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/header_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/ll_event_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/include"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <com.hackathon.genevents.resuable.CustomTextView
+                android:id="@+id/event_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@mipmap/like_icon_copy"
+                android:gravity="left"
+                android:text="Digital Hackathon"
+                android:textColor="#616161"
+                android:textSize="18.66dp"
+                app:font="@string/roboto_regular" />
+
+            <ImageView
+                android:id="@+id/event_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/splash" />
+
+            <com.hackathon.genevents.resuable.CustomTextView
+                android:id="@+id/event_dese"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="Time to put on your thinking hats and start hacking the digital future.Gather your best folks to support you"
+                android:textColor="#9E9E9E"
+                android:textSize="13.66dp"
+                app:font="@string/roboto_regular" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <com.hackathon.genevents.resuable.CustomTextView
+                    android:id="@+id/event_likes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.4"
+                    android:drawableLeft="@mipmap/like_icon_copy"
+                    android:drawablePadding="5dp"
+                    android:gravity="left|center_vertical"
+                    android:text="90"
+                    android:textColor="#616161"
+                    android:textSize="13.66dp"
+                    app:font="@string/roboto_regular" />
+
+                <com.hackathon.genevents.resuable.CustomTextView
+                    android:id="@+id/event_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.6"
+                    android:drawableLeft="@mipmap/location_icon"
+                    android:drawablePadding="5dp"
+                    android:gravity="left"
+                    android:text="Bangalore"
+                    android:textColor="#616161"
+                    android:textSize="13.66dp"
+                    app:font="@string/roboto_regular" />
+
+                <com.hackathon.genevents.resuable.CustomTextView
+                    android:id="@+id/event_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:drawableLeft="@mipmap/clock_icon"
+                    android:drawablePadding="5dp"
+                    android:gravity="left"
+                    android:text="12/11/2015,10.00 AM"
+                    android:textColor="#616161"
+                    android:textSize="13.66dp"
+                    app:font="@string/roboto_regular" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_evet_count"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_below="@+id/ll_event_des"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <com.hackathon.genevents.resuable.CustomTextView
+                android:id="@+id/event_attending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="Attending.."
+                android:textColor="#616161"
+                android:textSize="13.66dp"
+                app:font="@string/roboto_regular" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/event_av1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:src="@mipmap/avatar___event1" />
+
+                <ImageView
+                    android:id="@+id/event_av2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/avatar_event2" />
+
+                <ImageView
+                    android:id="@+id/event_av3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/avatar_event3" />
+
+                <ImageView
+                    android:id="@+id/event_av7"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/invite_add" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.hackathon.genevents.resuable.CustomTextView
+            android:id="@+id/ll_evet_c"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/ll_evet_count"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:background="#31B404"
+            android:textColor="#ffffff"
+            android:text="ATTEND THIS EVENT"
+            android:gravity="center"
+            android:orientation="vertical">
+            </com.hackathon.genevents.resuable.CustomTextView>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
